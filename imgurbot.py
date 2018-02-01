@@ -16,16 +16,16 @@ reddit = praw.Reddit(client_id=ID,
 
 # obtain reddit to download images from, and number of images to download
 subreddit_exists = True
-subreddit = str(raw_input("Please enter subredit: "))
+subreddit = str(raw_input('Please enter subredit: '))
 
 # check that subreddit exists
 try:
     reddit.subreddits.search_by_name(subreddit, exact=True)
 except NotFound:
-    print "Subreddit %s does not exist." % subreddit
+    print 'Subreddit %s does not exist.' % subreddit
     sys.exit(0)
 
-num_pics = int(raw_input("Please enter number of pics: "))
+num_pics = int(raw_input('Please enter number of pics: '))
 count = 0
 
 # find images/gifs in subreddit
@@ -35,9 +35,11 @@ for submission in reddit.subreddit(subreddit).hot():
             img_url = submission.url
             extension = img_url.rsplit('.', 1)
             extension = extension[1]
-            if extension in ["jpg", "gif", "jpeg", "png"]:
+            if extension in ['jpg', 'gif', 'jpeg', 'png']:
+                print 'Downloading...'
                 img = urllib.urlretrieve(
-                    img_url, "%s%i.%s" % (subreddit, count, extension))
+                    img_url, 'images/%s%i.%s' % (subreddit, count, extension))
                 count += 1
 
+print '\nCompleted!\n'
 # TODO: create better file naming mechanism
