@@ -19,4 +19,12 @@ Simply run the application using `python imgurbot.py` and follow the instruction
 
 Your images will appear in your working directory.
 
-Please e-mail or comment any features that would improve this application.
+## Example Use
+![Terminal](example_terminal.png)
+
+
+![Output](example_output.png)
+
+
+
+_Please e-mail or comment any features that would improve this application._
