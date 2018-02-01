@@ -7,7 +7,7 @@ ___NOTICE: This application is functional, however I will be adding more feature
 ## How to use  
 First, create a reddit personal use script application.
 
-Next, add a `credentials.py` to your working directory and add your applications credentials.
+Next, add a `credentials.py` file to your working directory and add your applications credentials.
 
     ID='YOUR_ID'  
     SECRET='YOUR_SECRET'  
@@ -15,13 +15,16 @@ Next, add a `credentials.py` to your working directory and add your applications
     AGENT='Example Bot by /u/example_bot'  
     USERNAME='YOUR_USERNAME'  
 
-Simply run the application using `python imgurbot.py` and follow the instructions.
+Create a folder called "images" in the directory that your `credentials.py` and `imgurbot.py` files are in. This is where your pictures will be saved.
 
-Your images will appear in your working directory.
+Run the application using `python imgurbot.py` and follow the instructions.
+
+Your images will appear in the "images" folder.
 
 ## Example Use
 ![Terminal](example_terminal.png)
 
+![Folder](image_folder.png)
 
 ![Output](example_output.png)
 
