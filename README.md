@@ -26,7 +26,7 @@ Your images will appear in the "images" folder.
 
 ![Folder](image_folder.png)
 
-![Output](example_output.png)
+![Output](output_example.png)
 
 
 
