@@ -22,7 +22,7 @@ Run the application using `python imgurbot.py` and follow the instructions.
 Your images will appear in the "images" folder.
 
 ## Example Use
-![Terminal](example_terminal.png)
+![Terminal](terminal_example.png)
 
 ![Folder](image_folder.png)
 
