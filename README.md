@@ -21,6 +21,8 @@ Run the application using `python imgurbot.py` and follow the instructions.
 
 Your images will appear in the "images" folder.
 
+__Helpful note:__ To view .gif files on a Mac select the image(s) and press "cmd" + "y".
+
 ## Example Use
 ![Terminal](terminal_example.png)
 
