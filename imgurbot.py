@@ -25,13 +25,14 @@ except NotFound:
     print 'Subreddit %s does not exist.' % subreddit
     sys.exit(0)
 
+# get number of pics requested
 num_pics = int(raw_input('Please enter number of pics: '))
 count = 0
 
 # find images/gifs in subreddit
 for submission in reddit.subreddit(subreddit).hot():
     if count < num_pics:
-        if 'https://i.imgur.com/' in submission.url:
+        if 'https://i.imgur.com/' or 'https://i.redd.it/' in submission.url:
             img_url = submission.url
             extension = img_url.rsplit('.', 1)
             extension = extension[1]
