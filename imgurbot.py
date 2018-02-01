@@ -41,5 +41,12 @@ for submission in reddit.subreddit(subreddit).hot():
                 img = urllib.urlretrieve(
                     img_url, 'images/%s_%s.%s' % (subreddit, str(submission.id[:4]), extension))
                 count += 1
-
+            if extension == 'gifv':
+                img_url = img_url.rsplit('.', 1)
+                img_url[1] = '.gif'
+                img_url = img_url[0] + img_url[1]
+                print img_url
+                img = urllib.urlretrieve(
+                    img_url, 'images/%s_%s.%s' % (subreddit, str(submission.id[:4]), 'gif'))
+                count += 1
 print '\nCompleted!\n'
