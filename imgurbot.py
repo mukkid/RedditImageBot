@@ -38,8 +38,7 @@ for submission in reddit.subreddit(subreddit).hot():
             if extension in ['jpg', 'gif', 'jpeg', 'png']:
                 print 'Downloading...'
                 img = urllib.urlretrieve(
-                    img_url, 'images/%s%i.%s' % (subreddit, count, extension))
+                    img_url, 'images/%s_%s.%s' % (subreddit, str(submission.id[:3]), extension))
                 count += 1
 
 print '\nCompleted!\n'
-# TODO: create better file naming mechanism
